@@ -1,0 +1,1082 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.container {
+    width: 1450px;
+    margin: 0 auto;
+}
+
+body {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(121, 9, 117, 1) 35%, rgba(93, 0, 255, 1) 100%);
+}
+
+header {
+    padding-top: 30px;
+}
+
+nav {
+    height: 100px;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.22);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    display: flex;
+}
+
+.nav__button {
+    height: 50px;
+    width: 150px;
+}
+
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.14);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1.9px);
+    -webkit-backdrop-filter: blur(1.9px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgb(6, 76, 138) 0%, rgba(121, 9, 117, 1) 55%, rgba(93, 0, 255, 1) 100%);
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1.9px);
+    -webkit-backdrop-filter: blur(1.9px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.first__ul {
+    display: flex;
+    align-items: center;
+}
+
+
+.first__ul a {
+    color: white;
+    font-family: 'outfit';
+    font-weight: 500;
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+.first__ul img {
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.second__ul {
+    width: 900px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 160px;
+    gap: 30px;
+}
+
+.second__ul a {
+    color: white;
+    font-family: 'outfit';
+    font-weight: 400;
+    font-style: semibold;
+    font-size: 20px;
+}
+
+.second__ul a:hover {
+    color: yellow;
+    transition: 0.5s;
+}
+
+.header__info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
+
+.header__info img {
+    width: 700px;
+    box-shadow: 20px 15px 105px red;
+    border-radius: 30px;
+
+}
+
+.info {
+    width: 500px;
+    align-items: center;
+    position: relative;
+
+}
+
+.header__info .image {
+    margin-top: 70px;
+}
+
+.info .img {
+    width: 200px;
+    margin-top: 100px;
+    position: absolute;
+    left: 0px;
+}
+
+.info .img2 {
+    position: absolute;
+    width: 200px;
+    left: 245px;
+    top: 260px;
+}
+
+.info .img3 {
+    position: absolute;
+    width: 200px;
+    left: 245px;
+    top: 390px;
+}
+
+.header__title {
+    color: white;
+    font-family: outfit;
+    font-size: 40px;
+    font-weight: 200;
+    font-style: normal;
+    margin-bottom: 30px;
+}
+
+.header__subtitle {
+    color: white;
+    font-family: outfit;
+    font-weight: 100;
+    font-size: 30px;
+    font-style: bold;
+}
+
+.ab__title {
+    color: white;
+    margin-bottom: 30px;
+    font-family: outfit;
+    font-size: 40px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.AboutMyself {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ab__subtitle {
+    color: white;
+    font-size: 29px;
+    font-family: outfit;
+    font-weight: 100;
+    text-align: center;
+}
+
+.mars {
+    color: orange;
+    font-weight: 400;
+}
+
+.AboutMyself img {
+    width: 600px;
+    box-shadow: 20px 15px 105px red;
+    border-radius: 30px;
+}
+
+.myself {
+    width: 600px;
+    height: 400px;
+    /* From https://css.glass */
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+}
+
+
+.swiper {
+    margin-top: 100px;
+    height: 300px;
+    width: 1300px;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 200px;
+}
+
+.swiper-slide:hover {
+    background-color: #fff;
+    transition: 0.2s;
+
+}
+
+.swiper-slide img {
+    display: block;
+    width: 200px;
+    object-fit: cover;
+}
+
+.swiper-slide:nth-child(4) img {
+    width: 300px;
+}
+
+.swiper-slide:nth-child(6) img {
+    width: 180px;
+}
+
+.swiper-slide:nth-child(5) img {
+    width: 270px;
+}
+
+.swiper-slide:nth-child(7) img {
+    width: 240px;
+}
+
+.swiper-slide:nth-child(8) img {
+    width: 300px;
+}
+
+.swiper-slide:nth-child(9) img {
+    width: 290px;
+}
+
+.projects {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card:nth-child(4) {
+    margin-top: 50px;
+}
+
+.card {
+    text-align: center;
+    margin-top: 200px;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+}
+
+.card img {
+    width: 400px;
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    border-radius: 20px;
+}
+
+.card__title {
+    margin-top: 240px;
+    font-weight: 200;
+    font-family: outfit;
+    color: white;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.card__subtitle {
+    font-family: outfit;
+    font-size: 20px;
+    color: white;
+    font-weight: 150;
+}
+
+.card:hover {
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.card:nth-child(5) {
+    margin-top: 50px;
+}
+
+.card:nth-child(6) {
+    margin-top: 50px;
+}
+
+.card:nth-child(5) img {
+    height: 230px;
+}
+
+.ag-format-container {
+    width: 1450px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.ag-courses_box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+
+.ag-courses_item {
+    -ms-flex-preferred-size: calc(33.33333% - 30px);
+    flex-basis: calc(33.33333% - 30px);
+
+    margin: 0 15px 30px;
+
+    overflow: hidden;
+
+    border-radius: 28px;
+}
+
+.ag-courses-item_link {
+    display: block;
+    padding: 30px 20px;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.38);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1.9px);
+    -webkit-backdrop-filter: blur(1.9px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+.ag-courses-item_link:hover,
+.ag-courses-item_link:hover .ag-courses-item_date {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.ag-courses-item_link:hover .ag-courses-item_bg {
+    -webkit-transform: scale(10);
+    -ms-transform: scale(10);
+    transform: scale(10);
+}
+
+.ag-courses-item_title {
+    min-height: 87px;
+    margin: 0 0 25px;
+    font-family: outfit;
+    overflow: hidden;
+
+    font-weight: semibold;
+    font-size: 30px;
+    color: #FFF;
+
+    z-index: 2;
+    position: relative;
+}
+
+.ag-courses-item_date-box {
+    font-size: 18px;
+    color: #FFF;
+    font-family: outfit;
+    z-index: 2;
+    position: relative;
+    font-weight: 200;
+}
+
+.ag-courses-item_date {
+    font-weight: bold;
+    color: #f9b234;
+
+    -webkit-transition: color .5s ease;
+    -o-transition: color .5s ease;
+    transition: color .5s ease
+}
+
+.ag-courses-item_bg {
+    height: 128px;
+    width: 128px;
+    background-color: #f9b234;
+
+    z-index: 1;
+    position: absolute;
+    top: -75px;
+    right: -75px;
+
+    border-radius: 50%;
+
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.ag-courses_item:nth-child(2n) .ag-courses-item_bg {
+    background-color: #3ecd5e;
+}
+
+.ag-courses_item:nth-child(3n) .ag-courses-item_bg {
+    background-color: #e44002;
+}
+
+.ag-courses_item:nth-child(4n) .ag-courses-item_bg {
+    background-color: #952aff;
+}
+
+.ag-courses_item:nth-child(5n) .ag-courses-item_bg {
+    background-color: #cd3e94;
+}
+
+.ag-courses_item:nth-child(6n) .ag-courses-item_bg {
+    background-color: #4c49ea;
+}
+
+.ag-courses_item:nth-child(9n) .ag-courses-item_bg {
+    background-color: #9dff00;
+}
+
+.ag-courses_item:nth-child(8n) .ag-courses-item_bg {
+    background-color: teal;
+}
+
+.ag-courses_item:nth-child(7n) .ag-courses-item_bg {
+    background-color: #00fbff;
+}
+
+.form-container {
+    width: 420px;
+    border-radius: 0.75rem;
+    margin-left: 120px;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.2px);
+    -webkit-backdrop-filter: blur(8.2px);
+    padding: 2rem;
+    color: rgba(243, 244, 246, 1);
+    font-family: outfit;
+    font-weight: 100;
+}
+
+.title {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 40px;
+    line-height: 2rem;
+    font-weight: 200;
+
+}
+
+.form {
+    margin-top: 1.5rem;
+}
+
+.input-group {
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.input-group label {
+    display: block;
+    color: white;
+    margin-bottom: 4px;
+    font-family: outfit;
+    font-weight: 100;
+    font-size: 15px;
+}
+
+.input-group input {
+    width: 100%;
+    border-radius: 0.375rem;
+    border: 1px solid rgb(215, 255, 16);
+    outline: 0;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.2px);
+    -webkit-backdrop-filter: blur(8.2px);
+    padding: 0.75rem 1rem;
+    color: rgba(243, 244, 246, 1);
+}
+
+.input-group input:focus {
+    border-color: rgba(167, 139, 250);
+}
+
+.forgot {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: yellow;
+    margin: 8px 0 14px 0;
+    font-family: outfit;
+    font-weight: 200;
+    font-size: 20px;
+}
+
+.forgot a,
+.signup a {
+    color: rgba(243, 244, 246, 1);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot a:hover,
+.signup a:hover {
+    text-decoration: underline rgba(167, 139, 250, 1);
+}
+
+.sign {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    text-align: center;
+    color: #000;
+    border: none;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    font-family: outfit;
+    font-weight: 600;
+    font-style: semibold;
+}
+
+.sign:hover {
+    background: rgb(83, 16, 177);
+    background: linear-gradient(90deg, rgba(83, 16, 177, 1) -1%, rgba(235, 255, 92, 1) 47%, rgba(83, 16, 177, 1) 100%);
+}
+
+.social-message {
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+.line {
+    height: 1px;
+    flex: 1 1 0%;
+    background-color: #fff;
+}
+
+.social-message .message {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: white;
+    font-family: outfit;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons .icon {
+    border-radius: 0.125rem;
+    padding: 0.75rem;
+    border: none;
+    background-color: transparent;
+    margin-left: 8px;
+}
+
+.social-icons .icon svg {
+    height: 35px;
+    width: 35px;
+    fill: #fff;
+}
+
+.signup {
+    text-align: center;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: yellow;
+}
+
+.contact__title {
+    color: white;
+    text-align: center;
+    font-family: outfit;
+    font-weight: 400;
+    font-size: 40px;
+    margin-top: 100px;
+    margin-bottom: 70px;
+}
+
+.contact {
+    display: flex;
+    gap: 100px;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.call__me {
+    width: 500px;
+    height: 700px;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.2px);
+    -webkit-backdrop-filter: blur(8.2px);
+    position: relative;
+}
+
+.call__me img {
+    width: 350px;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50px;
+    top: 30px;
+    box-shadow: 20px 15px 105px red;
+
+    left: 75px;
+}
+
+.my__info {
+    position: relative;
+    top: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.mtitle {
+    color: white;
+    font-family: outfit;
+    font-weight: 300;
+    font-size: 30px;
+}
+
+.btn {
+    border: none;
+    width: 400px;
+    height: 5em;
+    border-radius: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.21);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.2px);
+    -webkit-backdrop-filter: blur(8.2px);
+    cursor: pointer;
+    transition: all 450ms ease-in-out;
+}
+
+.sparkle {
+    fill: #AAAAAA;
+    transition: all 800ms ease;
+}
+
+.text {
+    font-weight: 600;
+    color: #AAAAAA;
+    font-size: medium;
+}
+
+.btn:hover {
+    background: linear-gradient(0deg, #2974ff, #683FEA);
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),
+        inset 0px -4px 0px 0px rgba(0, 0, 0, 0.2),
+        0px 0px 0px 4px rgba(255, 255, 255, 0.2),
+        0px 0px 180px 0px #0ac2ff;
+    transform: translateY(-2px);
+}
+
+.btn:hover .text {
+    color: white;
+}
+
+.btn:hover .sparkle {
+    fill: white;
+    transform: scale(1.2);
+}
+
+.btn:hover a {
+    color: white;
+}
+
+.btn a {
+    font-family: outfit;
+    font-weight: 200;
+    font-size: 30px;
+    color: black;
+}
+
+.btn1 {
+    border: none;
+    width: 400px;
+    height: 5em;
+    border-radius: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.21);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.2px);
+    -webkit-backdrop-filter: blur(8.2px);
+
+    cursor: pointer;
+    transition: all 450ms ease-in-out;
+}
+
+.btn i {
+    margin-right: 10px;
+}
+
+.btn1 i {
+    margin-right: 10px;
+}
+
+.btn2 i {
+    margin-right: 10px;
+}
+
+.sparkle1 {
+    fill: #AAAAAA;
+    transition: all 800ms ease;
+}
+
+.text1 {
+    font-weight: 600;
+    color: #AAAAAA;
+    font-size: medium;
+}
+
+.btn1:hover {
+    background: linear-gradient(0deg, #059200, #02fe84);
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),
+        inset 0px -4px 0px 0px rgba(0, 0, 0, 0.2),
+        0px 0px 0px 4px rgba(255, 255, 255, 0.2),
+        0px 0px 180px 0px #1bff17;
+    transform: translateY(-2px);
+}
+
+.btn1:hover .text {
+    color: rgb(0, 255, 55);
+}
+
+.btn1:hover .sparkle {
+    fill: rgb(0, 255, 68);
+    transform: scale(1.2);
+}
+
+.btn1:hover a {
+    color: white;
+}
+
+.btn1 a {
+    font-family: outfit;
+    font-weight: 200;
+    font-size: 30px;
+    color: black;
+}
+
+.btn2 {
+    border: none;
+    width: 400px;
+    height: 5em;
+    border-radius: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.21);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.2px);
+    -webkit-backdrop-filter: blur(8.2px);
+
+    cursor: pointer;
+    transition: all 450ms ease-in-out;
+}
+
+.sparkle2 {
+    fill: #AAAAAA;
+    transition: all 800ms ease;
+}
+
+.text2 {
+    font-weight: 600;
+    color: #AAAAAA;
+    font-size: medium;
+}
+
+.btn2:hover {
+    background: linear-gradient(0deg, #ce0cff, #f80763);
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 2, 2, 0.4),
+        inset 0px -4px 0px 0px rgba(0, 0, 0, 0.2),
+        0px 0px 0px 4px rgba(255, 255, 255, 0.2),
+        0px 0px 180px 0px #ff8206;
+    transform: translateY(-2px);
+}
+
+.btn2:hover .text {
+    color: rgb(241, 0, 137);
+}
+
+.btn2:hover .sparkle {
+    fill: rgb(255, 0, 0);
+    transform: scale(1.2);
+}
+
+.btn2:hover a {
+    color: white;
+}
+
+.btn2 a {
+    font-family: outfit;
+    font-weight: 200;
+    font-size: 30px;
+    color: black;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.loader {
+    padding-top: 100px;
+    display: flex;
+    margin: 0.25em 0;
+    margin-left: 130px;
+}
+
+.w-2 {
+    width: 0.5em;
+}
+
+.dash {
+    animation: dashArray 2s ease-in-out infinite,
+        dashOffset 2s linear infinite;
+}
+
+.spin {
+    animation: spinDashArray 2s ease-in-out infinite,
+        spin 8s ease-in-out infinite,
+        dashOffset 2s linear infinite;
+    transform-origin: center;
+}
+
+@keyframes dashArray {
+    0% {
+        stroke-dasharray: 0 1 359 0;
+    }
+
+    50% {
+        stroke-dasharray: 0 359 1 0;
+    }
+
+    100% {
+        stroke-dasharray: 359 1 0 0;
+    }
+}
+
+@keyframes spinDashArray {
+    0% {
+        stroke-dasharray: 270 90;
+    }
+
+    50% {
+        stroke-dasharray: 0 360;
+    }
+
+    100% {
+        stroke-dasharray: 270 90;
+    }
+}
+
+@keyframes dashOffset {
+    0% {
+        stroke-dashoffset: 365;
+    }
+
+    100% {
+        stroke-dashoffset: 5;
+    }
+}
+
+@keyframes spin {
+    0% {
+        rotate: 0deg;
+    }
+
+    12.5%,
+    25% {
+        rotate: 270deg;
+    }
+
+    37.5%,
+    50% {
+        rotate: 540deg;
+    }
+
+    62.5%,
+    75% {
+        rotate: 810deg;
+    }
+
+    87.5%,
+    100% {
+        rotate: 1080deg;
+    }
+}
+
+
+
+@media only screen and (max-width: 979px) {
+    .ag-courses_item {
+        -ms-flex-preferred-size: calc(50% - 30px);
+        flex-basis: calc(50% - 30px);
+    }
+
+    .ag-courses-item_title {
+        font-size: 24px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .ag-format-container {
+        width: 96%;
+    }
+
+}
+
+@media only screen and (max-width: 639px) {
+    .ag-courses_item {
+        -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    }
+
+    .ag-courses-item_title {
+        min-height: 72px;
+        line-height: 1;
+
+        font-size: 24px;
+    }
+
+    .ag-courses-item_link {
+        padding: 22px 40px;
+    }
+
+    .ag-courses-item_date-box {
+        font-size: 16px;
+    }
+}
+
+footer {
+    height: 200px;
+    display: flex;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.27);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.1px);
+    -webkit-backdrop-filter: blur(2.1px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
